@@ -831,7 +831,7 @@ body{overflow-x:hidden;}
         </div>
       </div>
     </div>
-  <div class="proj-card">
+  <div class="proj-card" id="card-03" style="cursor:pointer;">
       <div class="proj-content">
         <div class="proj-header">
           <div class="proj-num">03</div>
@@ -849,7 +849,7 @@ body{overflow-x:hidden;}
         </div>
         <div class="proj-footer">
           <div class="tags"><span class="tag">AI / Deep Tech</span><span class="tag">OCR &amp; Document</span><span class="tag">effiDoc</span><span class="tag">Newky</span></div>
-          <div class="proj-aside"><span class="coming-soon">Coming Soon</span></div>
+          <div class="proj-aside"><div class="p-arrow">&#8599;</div></div>
         </div>
       </div>
             <div class="proj-visual" style="background:#8ab4c8;">
@@ -1290,6 +1290,20 @@ function setLang(lang) {
       if(e.target.closest('a')) return;
       try { sessionStorage.setItem('back_to', location.href.split('/').pop() || 'index.html'); } catch(ex) {}
       window.location.href='digitall-case-study.html';
+    };
+  }
+  bindCard();
+  window.addEventListener('pageshow', bindCard);
+})();
+
+// Card 03 navigation
+(function(){
+  function bindCard(){
+    var c=document.getElementById('card-03');
+    if(c) c.onclick=function(e){
+      if(e.target.closest('a')) return;
+      try { sessionStorage.setItem('back_to', location.href.split('/').pop() || 'index.html'); } catch(ex) {}
+      window.location.href='newky-case-study.html';
     };
   }
   bindCard();
