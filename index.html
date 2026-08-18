@@ -723,7 +723,7 @@ body{overflow-x:hidden;}
         </svg>
       </span>
     </div>
-    <a id="download-cv-btn" href="resume_ebru_yurtseven_updated.pdf" class="nav-cv">Download CV</a>
+    <a id="download-cv-btn" href="Ebru_Yurtseven_Senior_Product_Designer_v2.pdf" class="nav-cv">Download CV</a>
     <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -1333,13 +1333,13 @@ function setLang(lang) {
   if (!btn) return;
   btn.addEventListener('click', function(e) {
     e.preventDefault();
-    fetch('resume_ebru_yurtseven_updated.pdf')
+    fetch('Ebru_Yurtseven_Senior_Product_Designer_v2.pdf')
       .then(function(res) { return res.blob(); })
       .then(function(blob) {
         var url = URL.createObjectURL(blob);
         var a = document.createElement('a');
         a.href = url;
-        a.download = 'Ebru_Yurtseven_CV.pdf';
+        a.download = 'Ebru_Yurtseven_Senior_Product_Designer_v2.pdf';
         document.body.appendChild(a);
         a.click();
         setTimeout(function() {
